@@ -7,7 +7,9 @@
     "plugins": ["transform-react-jsx"]
   },
   "scripts": {
-    "build": "babel src -d build/js"
+    "copy": "cp lib/* build/js/",
+    "babel": "babel src -d build/js",
+    "build": "npm run copy && npm run babel"
   },
   "repository": {
     "type": "git",
